@@ -9,3 +9,23 @@
 # The amount of state sales tax.
 # The total sales tax (county plus state)
 # Use at least one function with input and output in this program
+
+
+total_sales = float(input('Enter your total sales: '))
+
+def county_tax():
+    c_tax = .025
+    total_tax = total_sales*c_tax
+    return total_tax
+
+def state_tax():
+    s_tax = .05
+    total_tax = total_sales * s_tax
+    return total_tax
+
+def main():
+    print('County sales tax: ', county_tax())
+    print('State sales tax: ', state_tax())
+    print('total sales tax: ', county_tax()+state_tax())
+
+main()
